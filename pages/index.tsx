@@ -1,13 +1,14 @@
+import Text from "../components/common/Text";
+
 export default function Home() {
   return (
     <>
-      <h1>
+      <Text variant='h1'>
         Welcome to DataTome!
-      </h1>
-
-      <p>
+      </Text>
+      <Text>
         More to come, stay tuned!
-      </p>
+      </Text>
     </>
   );
 }
