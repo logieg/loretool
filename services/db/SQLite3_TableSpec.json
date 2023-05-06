@@ -1,0 +1,55 @@
+[
+  {
+    "table": "Collections",
+    "fields": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "description": "TEXT"
+    }
+  },
+  {
+    "table": "Groups",
+    "fields": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "description": "TEXT"
+    }
+  },
+  {
+    "table": "Entries",
+    "fields": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "content": "TEXT"
+    }
+  },
+  {
+    "table": "Tags",
+    "fields": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "collectionId": "INTEGER"
+    }
+  },
+  {
+    "table": "GroupEntries",
+    "fields": {
+      "groupId": "INTEGER",
+      "entryId": "INTEGER"
+    }
+  },
+  {
+    "table": "TagEntries",
+    "fields": {
+      "tagId": "INTEGER",
+      "entryId": "INTEGER"
+    }
+  },
+  {
+    "table": "EntryLinks",
+    "fields": {
+      "entryId": "INTEGER",
+      "linkedEntryId": "INTEGER"
+    }
+  }
+]
