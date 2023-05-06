@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Divider from "../common/Divider";
+import Text from "../common/Text";
 
 const FooterWrapper = styled.div`
   position: relative;
@@ -15,7 +16,9 @@ const Footer = () => {
     <>
       <Divider />
       <FooterWrapper>
-        Created by Incredible Catfish
+        <Text noPadding>
+          Created by Incredible Catfish
+        </Text>
       </FooterWrapper>
     </>
   );

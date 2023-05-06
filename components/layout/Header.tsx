@@ -16,13 +16,13 @@ const Header = () => {
   return (
     <>
       <Head>
-        <title>DataTome</title>
-        <meta name="description" content="Minimalist data management" />
+        <title>Loretool</title>
+        <meta name="description" content="Minimalist info management" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderWrapper>
         <Text variant='h2' noPadding>
-          DataTome
+          Loretool
         </Text>
       </HeaderWrapper>
     </>

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Text variant='h1'>
-        Welcome to DataTome!
+        Welcome to Loretool!
       </Text>
       <Text>
         More to come, stay tuned!

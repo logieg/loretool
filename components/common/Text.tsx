@@ -1,6 +1,7 @@
 interface TextProps {
   variant?: 'h1' | 'h2' | 'h3' | 'p',
   bold?: boolean,
+  italic?: boolean,
   noPadding?: boolean,
   children: React.ReactNode,
 }
@@ -9,6 +10,7 @@ interface TextProps {
 const Text = ({
   variant = 'p',
   bold = false,
+  italic = false,
   noPadding = false,
   children
 }: TextProps) => {
@@ -39,6 +41,7 @@ const Text = ({
         display: 'block',
         fontSize,
         fontWeight: bold ? 'bold' : 'inherit',
+        fontStyle: italic ? 'italic' : 'inherit',
         paddingBottom: noPadding ? '' : paddingBottom,
       }}
     >
