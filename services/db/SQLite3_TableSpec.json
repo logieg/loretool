@@ -12,7 +12,8 @@
     "fields": {
       "id": "INTEGER PRIMARY KEY",
       "name": "TEXT",
-      "description": "TEXT"
+      "description": "TEXT",
+      "collectionId": "INTEGER REFERENCES Collections (id)"
     }
   },
   {
@@ -20,7 +21,8 @@
     "fields": {
       "id": "INTEGER PRIMARY KEY",
       "name": "TEXT",
-      "content": "TEXT"
+      "content": "TEXT",
+      "collectionId": "INTEGER REFERENCES Collections (id)"
     }
   },
   {
@@ -28,28 +30,28 @@
     "fields": {
       "id": "INTEGER PRIMARY KEY",
       "name": "TEXT",
-      "collectionId": "INTEGER"
+      "collectionId": "INTEGER REFERENCES Collections (id)"
     }
   },
   {
     "table": "GroupEntries",
     "fields": {
-      "groupId": "INTEGER",
-      "entryId": "INTEGER"
+      "groupId": "INTEGER REFERENCES Groups (id)",
+      "entryId": "INTEGER REFERENCES Entries (id)"
     }
   },
   {
     "table": "TagEntries",
     "fields": {
-      "tagId": "INTEGER",
-      "entryId": "INTEGER"
+      "tagId": "INTEGER REFERENCES Tags (id)",
+      "entryId": "INTEGER REFERENCES Entries (id)"
     }
   },
   {
     "table": "EntryLinks",
     "fields": {
-      "entryId": "INTEGER",
-      "linkedEntryId": "INTEGER"
+      "entryId": "INTEGER REFERENCES Entries (id)",
+      "linkedEntryId": "INTEGER REFERENCES Entries (id)"
     }
   }
 ]
